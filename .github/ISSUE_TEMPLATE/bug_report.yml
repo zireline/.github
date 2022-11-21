@@ -2,7 +2,7 @@ name: '🐛Bug Report'
 description: 'File a bug report here'
 title: '[BUG]: Add bug name here'
 labels: ['bug']
-assignees: ''
+assignees: []
 
 body:
   - type: markdown
@@ -15,7 +15,7 @@ body:
       label: 'What does the bug look like?'
       description: 'When in doubt, share a screenshot showing exactly what the bug looks like when it happens. There are often surprising clues elsewhere in the IDE!'
     validations:
-      required: 'true'
+      required: true
 
   - type: textarea
     id: steps-to-reproduce
@@ -28,11 +28,13 @@ body:
         3. Scroll down to '...'
         4. See error
     validations:
-      required: 'true'
+      required: true
 
   - type: textarea
     id: additional-information
     attributes:
-      labels: 'Additional Information'
+      label: 'Additional Information'
       description: |
         Provide any additional information such as logs, screenshots, likes, scenarios in which the bug occurs so that it facilitates resolving the issue.
+    validations:
+      required: false
