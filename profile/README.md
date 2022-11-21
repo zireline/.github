@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+We are splitscale, a group of student dedicated in learning Software Engineering!
+
 <!--
 
 **Here are some ideas to get you started:**
