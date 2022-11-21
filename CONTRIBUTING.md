@@ -85,7 +85,7 @@ Tags:
 - Card
 - DisplayableObject
 
-see: Issue #23
+See: Issue #23
 ```
 
 ---
