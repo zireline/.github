@@ -19,7 +19,7 @@ that, the first word should be capitalized.
 _So for example, if you are modifying the `models` module:_
 
 ```
-  models: Add item card
+models: Add item card
 ```
 
 ### For the body, describe a short yet concise of what Problem, Task, or Reason for Commit.
