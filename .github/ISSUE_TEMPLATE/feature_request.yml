@@ -1,0 +1,26 @@
+name: ✨Feature Request
+description: Request a new feature or enhancement
+labels: ['feature']
+title: '[FEATURE]: Add feature name here'
+
+body:
+  - type: input
+    id: feature-name
+    attributes:
+      label: Name
+      description: What should we call this feature? a short and simple feature name
+      placeholder: ex. search bar
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Give a brief description of the feature or enhancement you would like to do
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: Give some additional information on the feature request like proposed solutions, links, screenshots, etc.
