@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-We are splitscale, a group of student dedicated in learning Software Engineering!
+We are splitscale, a group of students dedicated in learning Software Engineering!
 
 <!--
 
