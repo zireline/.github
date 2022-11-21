@@ -1,1 +1,0 @@
-# Default files for org repositories
