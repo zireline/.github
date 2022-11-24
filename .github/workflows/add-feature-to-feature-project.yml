@@ -17,6 +17,7 @@ jobs:
       pull-requests: write
       
     steps:
+    - uses: actions/checkout@v3
     - name: Add To GitHub projects
       uses: actions/add-to-project@v0.4.0
       with: 
