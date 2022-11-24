@@ -1,24 +1,20 @@
-name: Add features to features project
+name: Add bugs to bugs project
 
 on:
-  workflow_call:
-  
-env:
-  TOKEN: ${{secrets.GITHUB_TOKEN}}
+  issues:
+    types:
+      - opened
 
 jobs:
   add-to-project:
+    name: Add issue to project
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-      
     steps:
-    - uses: actions/checkout@v3
-    
-    - uses: actions/add-to-project@v0.4.0
-      with:
-        project-url: https://github.com/orgs/splitscale/projects/1
-        github-token: $TOKEN
-        labeled: feature
-        label-operator: OR
+      - uses: actions/add-to-project@v0.4.0
+        with:
+          # You can target a repository in a different organization
+          # to the issue
+          project-url: https://github.com/orgs/splitscale/projects/1
+          github-token: ${{ secrets.PROJECTS_PAT }}
+          labeled: feature
+          label-operator: OR
