@@ -1,0 +1,11 @@
+name: Auto label based on Title key 'SD-'
+
+on:
+  workflow_dispatch:
+  issues:
+    types:
+      - opened
+
+jobs:
+  call-labeler:
+    uses: splitscale/.github/.github/workflows/labeler-title.yml@main

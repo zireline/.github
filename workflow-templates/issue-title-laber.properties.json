@@ -1,0 +1,4 @@
+{
+  "name": "Issue Auto Labeler",
+  "description": "Auto label issues based on title key 'SD-'"
+}
