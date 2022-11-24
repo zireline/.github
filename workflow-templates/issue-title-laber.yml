@@ -1,11 +1,16 @@
-name: Auto label based on Title key 'SD-'
-
+name: "Title-based Issue Labeler"
 on:
-  workflow_dispatch:
+  workflow_call:
   issues:
-    types:
-      - opened
+    types: [opened, edited]
 
 jobs:
-  call-labeler:
-    uses: splitscale/.github/.github/workflows/labeler-title.yml@main
+  start-labeling:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: github/issue-labeler@v2.5 #May not be the latest version
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: splitscale/.github/config/labeler-config.yml
+        enable-versioned-regex: 0
+        include-title: 1
