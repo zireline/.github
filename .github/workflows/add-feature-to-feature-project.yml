@@ -4,7 +4,7 @@ on:
   workflow_call:
   
 env:
-  TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
+  TOKEN: ${{secrets.AUTO_ADD_ISSUE}}
 
 jobs:
   add-to-project:
