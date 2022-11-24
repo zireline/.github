@@ -19,4 +19,4 @@ jobs:
       #     github-token: ${{secrets.PROJECTS_PAT}}
       #     labeled: feature
       #     label-operator: OR
-      - run: echo ${{github.event.issue}}
+      - run: echo "${{github.event.issue}}"
