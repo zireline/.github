@@ -1,20 +1,26 @@
-name: Auto Assign to Project(s)
+name: Add features to features project
 
 on:
+  workflow_call:
   issues:
-    types: [opened, labeled]
+    types:
+      - opened
 
 env:
   MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
 
 jobs:
-  assign_one_project:
+  add-to-project:
     runs-on: ubuntu-latest
-    name: Assign to One Project
     steps:
-    - name: Assign issues and pull requests with `bug` label to project 1
-      uses: srggrs/assign-one-project-github-action@1.3.1
-      if: github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'feature')
-      with:
-        # The url of the project to be assigned to.
-        project: https://github.com/orgs/splitscale/projects/1
+    - name: Add To GitHub projects
+      uses: actions/add-to-project@v0.4.0
+      with: 
+        # URL of the project to add issues to
+        project-url: https://github.com/orgs/splitscale/projects/1/views/1
+        # A GitHub personal access token with write access to the project
+        github-token: MY_GITHUB_TOKEN
+        # A comma-separated list of labels to use as a filter for issue to be added
+        labeled: feature
+        # The behavior of the labels filter, AND to match all labels, OR to match any label, NOT to exclude any listed label (default is OR)
+        label-operator: OR
