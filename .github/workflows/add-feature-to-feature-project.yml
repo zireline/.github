@@ -17,5 +17,5 @@ jobs:
           # to the issue
           project-url: https://github.com/orgs/splitscale/projects/1
           github-token: ${{secrets.PROJECTS_PAT}}
-          labeled: feature
+          labeled: bug
           label-operator: OR
