@@ -1,5 +1,6 @@
 name: "Title-based Issue Labeler"
 on:
+  workflow_call:
   issues:
     types: [opened, edited]
 
