@@ -1,8 +1,7 @@
-name: '🐛Bug Report'
+name: :bug: Bug Report
 description: 'File a bug report here'
-title: '[BUG]: Add bug name here'
+title: '[BUG]: Name'
 labels: ['bug']
-assignees: []
 
 body:
   - type: markdown
