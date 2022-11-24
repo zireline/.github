@@ -2,6 +2,9 @@ name: Add features to features project
 
 on:
   workflow_call:
+  
+env:
+  TOKEN: ${{secrets.AUTO_ADD_ISSUE}}
 
 jobs:
   add-to-project:
@@ -12,14 +15,10 @@ jobs:
       
     steps:
     - uses: actions/checkout@v3
-    - name: Add To GitHub projects
-      uses: actions/add-to-project@v0.4.0
-      with: 
-        # URL of the project to add issues to
+    
+    - uses: actions/add-to-project@v0.4.0
+      with:
         project-url: https://github.com/orgs/splitscale/projects/1
-        # A GitHub personal access token with write access to the project
-        github-token: "${{ secrets.AUTO_ADD_ISSUE }}"
-        # A comma-separated list of labels to use as a filter for issue to be added
+        github-token: $TOKEN
         labeled: feature
-        # The behavior of the labels filter, AND to match all labels, OR to match any label, NOT to exclude any listed label (default is OR)
         label-operator: OR
