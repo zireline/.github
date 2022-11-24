@@ -14,7 +14,7 @@ jobs:
 
   call-feature-details-issue-to-project:
     uses: splitscale/.github/.github/workflows/feature-details-issue-to-project.yml@main
-    if: ${{ startsWith(github.event.issue.title, 'FD') }}
+    if: ${{ startsWith(github.event.issue.title, 'SD-') }}
     secrets: inherit
   
   call-bug-issue-to-project:
