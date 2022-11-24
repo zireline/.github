@@ -1,0 +1,21 @@
+name: Add bug issues to project
+
+on:
+  workflow_call:
+  issues:
+    types:
+      - opened
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.4.0
+        with:
+          # You can target a repository in a different organization
+          # to the issue
+          project-url: https://github.com/orgs/splitscale/projects/3
+          github-token: ${{secrets.PROJECTS_PAT}}
+          labeled: bug
+          label-operator: OR
