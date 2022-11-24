@@ -16,6 +16,6 @@ jobs:
           # You can target a repository in a different organization
           # to the issue
           project-url: https://github.com/orgs/splitscale/projects/1
-          github-token: ${{ secrets.PROJECTS_PAT }}
+          github-token: ${{secrets.PROJECTS_PAT}}
           labeled: feature
           label-operator: OR
